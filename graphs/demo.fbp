@@ -1,3 +1,7 @@
+# chained single-bit adders to form a 3-bit adder
+# the first number is added to the second number
+# the result is output via the BinaryNumber component
+
 FirstAdder(circuit/FullAdder) OUT -> 0 Number()
 FirstAdder(circuit/FullAdder) CARRYOUT -> CARRYIN SecondAdder()
 
@@ -11,12 +15,12 @@ Number(circuit/BinaryNumber) OUT -> IN Display(core/Output)
 
 '0' -> CARRYIN FirstAdder
 
-# bit 0
+# first number
 '1' -> A ThirdAdder
 '0' -> A SecondAdder
 '0' -> A FirstAdder
 
-# bit 1
+# second number
 '1' -> B ThirdAdder
 '0' -> B SecondAdder
 '0' -> B FirstAdder
