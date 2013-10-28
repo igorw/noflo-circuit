@@ -1,0 +1,39 @@
+{
+  "name": "noflo-circuit",
+  "description": "NoFlo Circuit Component",
+  "version": "0.1.0",
+  "author": {
+    "name": "Igor Wiedler",
+    "email": "igor@wiedler.ch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/igorw/noflo-circuit.git"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/igorw/noflo-circuit/blob/master/LICENSE-MIT"
+    }
+  ],
+  "dependencies": {
+    "noflo": "~0.4.0"
+  },
+  "devDependencies": {
+    "noflo-core": "~0.1.0",
+    "noflo-filesystem": "~1.0.0"
+  },
+  "keywords": [],
+  "noflo": {
+    "components": {
+      "And": "components/And.coffee",
+      "Or": "components/Or.coffee",
+      "Xor": "components/Xor.coffee",
+      "BinaryNumber": "components/BinaryNumber.coffee"
+    },
+    "graphs": {
+      "HalfAdder": "graphs/HalfAdder.fbp",
+      "FullAdder": "graphs/FullAdder.fbp"
+    }
+  }
+}

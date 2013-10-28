@@ -1,0 +1,22 @@
+FirstAdder(circuit/FullAdder) OUT -> 0 Number()
+FirstAdder(circuit/FullAdder) CARRYOUT -> CARRYIN SecondAdder()
+
+SecondAdder(circuit/FullAdder) OUT -> 1 Number()
+SecondAdder(circuit/FullAdder) CARRYOUT -> CARRYIN ThirdAdder()
+
+ThirdAdder(circuit/FullAdder) OUT -> 2 Number()
+ThirdAdder(circuit/FullAdder) CARRYOUT -> 3 Number()
+
+Number(circuit/BinaryNumber) OUT -> IN Display(core/Output)
+
+'0' -> CARRYIN FirstAdder
+
+# bit 0
+'1' -> A ThirdAdder
+'0' -> A SecondAdder
+'0' -> A FirstAdder
+
+# bit 1
+'1' -> B ThirdAdder
+'0' -> B SecondAdder
+'0' -> B FirstAdder

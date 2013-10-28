@@ -1,0 +1,14 @@
+EXPORT=A.IN:A
+EXPORT=B.IN:B
+EXPORT=CARRYIN.IN:CARRYIN
+EXPORT=SECONDHALF.OUT:OUT
+EXPORT=XOR.OUT:CARRYOUT
+
+A(core/Split) OUT -> A FirstHalf(circuit/HalfAdder)
+B(core/Split) OUT -> B FirstHalf(circuit/HalfAdder)
+CARRYIN(core/Split) OUT -> B SecondHalf(circuit/HalfAdder)
+
+FirstHalf(circuit/HalfAdder) OUT -> A SecondHalf()
+FirstHalf(circuit/HalfAdder) CARRY -> A Xor(circuit/Xor)
+
+SecondHalf(circuit/HalfAdder) CARRY -> B Xor(circuit/Xor)

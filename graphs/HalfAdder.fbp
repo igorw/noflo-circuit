@@ -1,0 +1,10 @@
+EXPORT=A.IN:A
+EXPORT=B.IN:B
+EXPORT=XOR.OUT:OUT
+EXPORT=AND.OUT:CARRY
+
+A(core/Split) OUT -> A Xor(circuit/Xor)
+B(core/Split) OUT -> B Xor(circuit/Xor)
+
+A() OUT -> A And(circuit/And)
+B() OUT -> B And(circuit/And)
