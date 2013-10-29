@@ -1,4 +1,4 @@
-# chained single-bit adders to form a 3-bit adder
+# chained single-bit adders to form a 3-bit ripple-carry adder
 # the first number is added to the second number
 # the result is output via the BinaryNumber component
 
